@@ -1,37 +1,46 @@
-import { useState } from 'react'
-import Card from './components/Card'
-import Navbar from './components/Navbar'
-import Sidebar from './components/Sidebar'
-import Playbar from './components/Playbar'
-import aajkiraat from "../assets/images/aajkiraat.jpeg";
-import laalpari from "../assets/images/laalpari.jpeg";
-import sajni from "../assets/images/sajni.jpeg";
-import tauba from "../assets/images/tauba.jpeg";
-import images from "../assets/images/images.jpeg"; // if you really named one 'images.jpeg'
+import React from "react";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import Playbar from "./components/Playbar";
+import Romantic from "./pages/Romantic";
+import English from "./pages/English";
+import Party from "./pages/Party";
+import HipHop from "./pages/HipHop";
+import Bollywood from "./pages/Bollywood";
+import Home from "./Home";
+import "./App.css";
 
-
-import './App.css'
-
-function App() {
+function Layout() {
   return (
-    <>
-       <Navbar/>  
-       <div className="flex">
-       <Sidebar/>  
-       <main className="flex-1 bg-amber-50 min-h-[80vh] overflow-y-auto p-4">
-          <h1 className="text-2xl font-bold mb-4">For You</h1>
-          <div className="hits flex flex-row gap-4 border">
-            <h1>Trending Hits</h1>
-            <br />
-            <div><Card /></div>
-              
-          </div>
+    <div className="h-screen flex flex-col">
+      <Navbar />
+      <div className="flex flex-1 overflow-hidden">
+        <Sidebar />
+        <main className="flex-1 bg-amber-50 overflow-y-auto p-4">
+          <Outlet /> 
         </main>
-       </div>
-       <Playbar/>
-    
-    </>
-  )
+      </div>
+      <Playbar />
+    </div>
+  );
 }
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      { path: "", element: <Home /> },
+      { path: "romantic", element: <Romantic /> },
+      { path: "english", element: <English /> },
+      { path: "party", element: <Party /> },
+      { path: "hiphop", element: <HipHop /> },
+      { path: "bollywood", element: <Bollywood /> },
+    ],
+  },
+]);
 
-export default App
+
+export default function App() {
+  return <RouterProvider router={router} />;
+}

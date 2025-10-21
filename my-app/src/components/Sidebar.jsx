@@ -1,26 +1,32 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
-     const categories = [
-    "Romantic Hits",
-    "English Pop & Rock",
-    "Party Anthems",
-    "Lo-Fi & Chill",
-    "Bollywood Classics"
-  ]
+  const categories = [
+    { title: "Romantic Hits", path: "/romantic" },
+    { title: "English Pop & Rock", path: "/english" },
+    { title: "Party Anthems", path: "/party" },
+    { title: "Hip Hop", path: "/hiphop" },
+    { title: "Bollywood Classics", path: "/bollywood" },
+  ];
+
   return (
-    <div className="hidden md:flex flex-col sticky left-0 bg-amber-100 h-[90vh] w-[22vw] ">
-        <div className='px-1 py-1 my-0.5'><span className='font-bold text-2xl '>Explore</span></div>
-        {categories.map((cat, i) => (
-        <button 
+    <div className="hidden md:flex flex-col bg-amber-100 w-[22vw] h-full overflow-y-auto shadow-md">
+      <div className="px-4 py-3">
+        <span className="font-bold text-2xl">Explore</span>
+      </div>
+
+      {categories.map((cat, i) => (
+        <Link
           key={i}
+          to={cat.path}
           className="text-left px-3 py-2 rounded-md hover:bg-amber-200 transition font-medium cursor-pointer"
         >
-          {cat}
-        </button>
+          {cat.title}
+        </Link>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
