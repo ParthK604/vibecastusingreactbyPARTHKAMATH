@@ -98,7 +98,7 @@ export default function Home() {
     <div>
       <div className="trending flex flex-col gap-1 px-2">
         <h1 className="font-bold text-2xl">Trending Hits</h1>
-        <div className="flex flex-wrap gap-6 mt-4">
+        <div className="flex flex-wrap gap-6 mt-2">
           {Trending.map((song, i) => (
             <Card key={i} img={song.image} title={song.title} artist={song.artist} />
           ))}
@@ -107,7 +107,7 @@ export default function Home() {
 
       <div className="trending flex flex-col gap-1 px-2 mt-6">
         <h1 className="font-bold text-2xl">English</h1>
-        <div className="flex flex-wrap gap-6 mt-4">
+        <div className="flex flex-wrap gap-6 mt-2">
           {English.map((song, i) => (
             <Card key={i} img={song.image} title={song.title} artist={song.artist} />
           ))}
