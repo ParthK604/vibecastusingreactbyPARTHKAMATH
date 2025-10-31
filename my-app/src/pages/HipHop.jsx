@@ -1,3 +1,11 @@
-export default function Romantic() {
-  return <h1 className="text-2xl font-bold">Romantic Hits ❤️</h1>;
+import React from 'react'
+
+function HipHop() {
+  return (
+    <div>
+      
+    </div>
+  )
 }
+
+export default HipHop
