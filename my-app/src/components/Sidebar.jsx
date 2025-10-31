@@ -5,7 +5,7 @@ const Sidebar = () => {
   const categories = [
     { title: "Romantic Hits", path: "/romantic" },
     { title: "English Pop & Rock", path: "/english" },
-    { title: "Party Anthems", path: "/party" },
+    { title: "Hip Hop", path: "/hiphop" },
     { title: "Spanish", path: "/spanish" },
     { title: "Bollywood Classics", path: "/bollywood" },
   ];

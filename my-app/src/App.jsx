@@ -5,7 +5,7 @@ import Sidebar from "./components/Sidebar";
 import Playbar from "./components/Playbar";
 import Romantic from "./pages/Romantic";
 import English from "./pages/English";
-import Party from "./pages/Party";
+import HipHop from "./pages/HipHop";
 import Spanish from "./pages/Spanish";
 import Bollywood from "./pages/Bollywood";
 import Home from "./Home";
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
       { path: "", element: <Home /> },
       { path: "romantic", element: <Romantic /> },
       { path: "english", element: <English /> },
-      { path: "party", element: <Party /> },
+      { path: "hiphop", element: <HipHop /> },
       { path: "spanish", element: <Spanish /> },
       { path: "bollywood", element: <Bollywood /> },
     ],
