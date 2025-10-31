@@ -1,6 +1,6 @@
 import React from 'react'
 
-function HipHop() {
+function Spanish() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function HipHop() {
   )
 }
 
-export default HipHop
+export default Spanish

@@ -6,7 +6,7 @@ import Playbar from "./components/Playbar";
 import Romantic from "./pages/Romantic";
 import English from "./pages/English";
 import Party from "./pages/Party";
-import HipHop from "./pages/HipHop";
+import Spanish from "./pages/Spanish";
 import Bollywood from "./pages/Bollywood";
 import Home from "./Home";
 import "./App.css";
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       { path: "romantic", element: <Romantic /> },
       { path: "english", element: <English /> },
       { path: "party", element: <Party /> },
-      { path: "hiphop", element: <HipHop /> },
+      { path: "spanish", element: <Spanish /> },
       { path: "bollywood", element: <Bollywood /> },
     ],
   },
